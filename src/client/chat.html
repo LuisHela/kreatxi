@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nest.js Chat Application</title>
+
+  <!-- Bootstrap.css -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+    crossorigin="anonymous"
+  />
+
+  
+</head>
+<body>
+  <div class="container">
+    <main>
+      <div class="mb-3 mt-3">
+        <p class="text-light mb-3">Messages:</p>
+        <ul class="text-light ps-0" id="messages-container"></ul>
+      </div>
+
+      <form>
+        <div class="form-floating mb-3">
+          <input type="email" id="inputEmail" class="form-control" placeholder="name@example.com" />
+          <label for="inputEmail">Your email</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <textarea id="inputMessage" class="form-control" placeholder="Message..."></textarea>
+          <label for="inputMessage">Your message...</label>
+        </div>
+        <button id="loadMoreButton" class="btn btn-primary mt-3">Load More</button>
+      </form>
+    </main>
+  </div>
+
+  <!-- .js Files -->
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"
+  ></script>
+  <script src="chat.js"></script>
+</body>
+</html>

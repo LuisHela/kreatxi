@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Register Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="user-ragistration">
+    <div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <h3>Welcome</h3>
+                        <p>Already have a account !</p>
+                        <form action="index.html" method="post" target="_blank">
+                            <input type="submit" name="btnlogin" value="Login" />
+                          </form>
+                    </div>
+                    <div class="col-md-9 register-right">
+                        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Employee</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Admin</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                                     
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                    	<div class="form-group form-group-picture">
+                                            <label for="employeeProfilePicture">Profile Picture:</label>
+                                            <input type="file" id="employeeProfilePicture" name="profilePicture" accept="image/*" />
+                                        </div> 
+                                        <div class="form-group">
+                                            <input type="text" id="employeeFirstName" class="form-control" placeholder="First Name *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" id="employeeLastName" class="form-control" placeholder="Last Name *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password"id="employeePassword" class="form-control" placeholder="Password *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password"id ="confirmpassword"class="form-control" placeholder="Confirm Password *" value="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="email" id="employeeEmail"class="form-control" placeholder="Your Email *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" id="employeePhone" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-control" name="department" id="employeeDepartment">
+                                                <option class="hidden" selected disabled>Please choose your department</option>
+                                                <option value="Frontend">Frontend</option>
+                                                <option value="Backend">Backend</option>
+                                                <option value="Fullstack">Fullstack</option>
+                                                <option value="It">It</option>
+                                                <option value="Human Resource">Human Resource</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="birthday">Birthday:</label>
+                                             <input type="date" id="employeeBirthday" name="birthday" required><br><br>
+                                        </div>
+                                        <div id="employeeMessage" class="alert alert-danger" style="display: none;"></div>
+                                        <input type="submit" id="employeeRegisterButton" class="btnRegister" value="Register" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <h3  class="register-heading">Apply as a Admin</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                        	<div class="form-group form-group-picture">
+                                            <label for="hirerProfilePicture">Profile Picture:</label>
+                                            <input type="file" id="hirerProfilePicture" name="profilePicture" accept="image/*" />
+                                        </div> 
+                                            <input type="text" id="hirerFirstName" class="form-control" placeholder="First Name *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" id="hirerLastName" class="form-control" placeholder="Last Name *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" id="hirerEmail" class="form-control" placeholder="Email *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" id="hirerPhone" maxlength="10" minlength="10" class="form-control" placeholder="Phone *" value="" />
+                                        </div>
+                                         </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="password" id="hirerPassword" class="form-control" placeholder="Password *" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
+                                        </div>
+                                         <div class="form-group">
+                                          <label for="birthday">Birthday:</label>
+                                             <input type="date" id="hirerBirthday" name="birthday" required><br><br>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" id="securitycode" class="form-control" placeholder="Security Code" value="" />
+                                          </div>                                          
+                                        <input type="submit" id="hirerRegisterButton" class="btnRegister" value="Register" />
+                                        <div id="hirerMessage" class="alert alert-danger" style="display: none;"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+</div>
+<!-- partial -->
+<script src="register.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js'></script>
+</body>
+</html>
